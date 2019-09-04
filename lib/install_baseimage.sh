@@ -14,7 +14,11 @@ apt-get install -y curl
 apt-get install -y jq
 apt-get install -y psmisc
 apt-get install -y iputils-ping
-apt-get install solc -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+npm install solc -g
+ln -s /root/.nvm/versions/node/v10.16.3/bin/solcjs /bin/solc
 apt-get install bsdmainutils
 apt-get install -y openjdk-8-jdk
 apt-get -y install maven
